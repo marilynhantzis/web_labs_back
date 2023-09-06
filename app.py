@@ -1,4 +1,4 @@
-from flask import Flask, redirect
+from flask import Flask, redirect, url_for
 app = Flask(__name__)
 
 @app.route("/")
@@ -34,5 +34,17 @@ def lab1():
     называемых микрофреймворков — минималистичных каркасов
     веб-приложений, сознательно предоставляющих лишь самые базовые возможности.
     """
-
-        
+@app.route("/lab1/oak")
+def oak():
+    return '''
+    <!doctype html>
+    <html>
+        <head>
+            <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') +'''">
+        </head>
+        <body>
+            <h1>ДУБ</h1>
+            <img src="''' + url_for('static', filename='oak.jpg.jpg') + '''">
+        </body>
+    </html>    
+    '''
