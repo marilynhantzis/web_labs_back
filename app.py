@@ -171,4 +171,6 @@ def web():
 @app.route("/lab2/example")
 def example():
     name = 'Артем Тарбанаков'
-    return render_template('example.html', name = name)
+    num = 2
+    course = 3
+    return render_template('example.html', name = name, num = num, course = course)
