@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    background-color: papayawhip;
+}
+
+header {
+    background-color: peru;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    color: white;
+    padding: 20px;
+    font-size: 16pt;
+    left: 0;
+    right: 0;
+}
+
+footer { 
+    z-index: 1;
+    background-color: peru;
+    color: white;
+    padding: 20px;
+    font-size: 16pt;
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
