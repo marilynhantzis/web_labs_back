@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for
+from flask import Flask, redirect, url_for, render_template
 app = Flask(__name__)
 
 @app.route("/")
@@ -22,6 +22,7 @@ def menu():
             <h2 class="hh">Список лабораторных</h2>
             <ul class='labs'>
             <li><a href = "/lab1"> Лабораторная работа 1."Простые страницы на Flask" </a></li>
+            <li><a href = "/lab1"> Лабораторная работа 2."Шаблоны в Flask" </a></li>
             </ul>
             <footer>
                 &copy; Тарбанаков Артем Сергеевич, ФБИ-14, 3 курс, 2023
@@ -167,3 +168,7 @@ def web():
         </body>
     </html>    
     '''
+@app.route("/lab2/example")
+def example():
+    name = 'Артем Тарбанаков'
+    return render_template('example.html', name = name)
