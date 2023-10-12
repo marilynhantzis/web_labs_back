@@ -15,6 +15,11 @@
         <div>11x28 = {{11*28}}</div>
         <div>8452/793 = {{8452/793}}</div>
         <div>45^8 = {{45**8}}</div>
+        <ul>
+            {% for f in fruits %}
+            <li>{{f.name}}: {{f.price}} &#x20bd;</div></li>
+            {% endfor %}
+        </ul>
     </main>
     <footer>
         &copy; 
@@ -23,7 +28,7 @@
         {% else %}
             Анонимус,
         {% endif %}
-        ФБИ-14, 
+        {{group}}, 
         {{course}} курс, 
         2023
     </footer>

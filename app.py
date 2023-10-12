@@ -173,4 +173,14 @@ def example():
     name = 'Артем Тарбанаков'
     num = 2
     course = 3
-    return render_template('example.html', name = name, num = num, course = course)
+    name, num, course, group = 'Артем Тарбанаков', 2, 3, 'ФБИ-14'
+    fruits = [
+        {'name': 'яблоки', 'price': 100}, 
+        {'name': 'груши', 'price': 120}, 
+        {'name': 'апельсин', 'price': 80}, 
+        {'name': 'мандарины', 'price': 95}, 
+        {'name': 'манго', 'price': 321}
+        ]
+    return render_template('example.html', 
+                           name = name, num = num, course = course, group = group,
+                           fruits = fruits) 
