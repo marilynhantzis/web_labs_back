@@ -181,6 +181,18 @@ def example():
         {'name': 'мандарины', 'price': 95}, 
         {'name': 'манго', 'price': 321}
         ]
+    books = [
+        {'book': 'Мастер и Маргарита', 'author': 'Булгаков М.А.', 'genre': 'Роман', 'pages': 576 },
+        {'book': 'Белая гвардия', 'author': 'Булгаков М.А.', 'genre': 'Роман', 'pages': 278 },
+        {'book': 'Идиот', 'author': 'Достоевский Ф.М.', 'genre': 'Роман', 'pages': 864 },
+        {'book': 'Братья Карамазовы', 'author': 'Достоевский Ф.М.', 'genre': 'Роман', 'pages': 1488 },
+        {'book': 'Игрок', 'author': 'Достоевский Ф.М.', 'genre': 'Роман', 'pages': 369 },
+        {'book': 'Стихотворения и поэмы', 'author': 'Есенин С.А.', 'genre': 'Поэзия', 'pages': 124 },
+        {'book': 'Черный человек', 'author': 'Есенин С.А.', 'genre': 'Поэзия', 'pages': 169 },
+        {'book': 'Лирика', 'author': 'Пастернак Б.Л.', 'genre': 'Поэзия', 'pages': 98 },
+        {'book': 'Доктор Живаго', 'author': 'Пастернак Б.Л.', 'genre': 'Роман', 'pages': 269 },
+        {'book': 'Евгений Онегин', 'author': 'Пушкин А.С.', 'genre': 'Роман', 'pages': 333 }
+    ]
     return render_template('example.html', 
                            name = name, num = num, course = course, group = group,
-                           fruits = fruits) 
+                           fruits = fruits, books = books) 
