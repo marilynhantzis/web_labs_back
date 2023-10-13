@@ -28,3 +28,10 @@ footer {
     left: 0;
     right: 0;
 }
+
+img {
+    height: 220px;
+    width: 550px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

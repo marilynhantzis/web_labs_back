@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block lab %} Топ 5 картинок цветов {% endblock %}
+
+{% block main %} 
+    <div><h2>Первое место:</h2></div>
+    <img src="{{ url_for('static', filename='flo1.jpg')}}">
+    <div>Объективо, заслуженное первое место, просто и со вкусом.</div>
+    <div><h2>Второе место:</h2></div>
+    <img src="{{ url_for('static', filename='flo2.jpeg')}}">
+    <div>Второе место за необычный цвет и красивую фотографию, но к сожалению, цветок всего лишь один</div>
+    <div><h2>Третье место:</h2></div>
+    <img src="{{ url_for('static', filename='flo3.jpeg')}}">
+    <div>Ярко и красиво, даже слишком ярко, поэтому третье место</div>
+    <div><h2>Четвертое место:</h2></div>
+    <img src="{{ url_for('static', filename='flo4.jpg')}}">
+    <div>Розы слишком банально, но все равно красиво, поэтому четвертое место</div>
+    <div><h2>Пятое место:</h2></div>
+    <img src="{{ url_for('static', filename='flo5.jpg')}}">
+    <div style="margin-bottom: 250px;">Ромашки выглядят дешево, будто их только что сорвали с клумбы, поэтому последнее место</div>
+{% endblock %} 
