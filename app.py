@@ -22,7 +22,7 @@ def menu():
             <h2 class="hh">Список лабораторных</h2>
             <ul class='labs'>
             <li><a href = "/lab1"> Лабораторная работа 1."Простые страницы на Flask" </a></li>
-            <li><a href = "/lab2/example"> Лабораторная работа 2."Шаблоны в Flask" </a></li>
+            <li><a href = "/lab2"> Лабораторная работа 2."Шаблоны в Flask" </a></li>
             </ul>
             <footer>
                 &copy; Тарбанаков Артем Сергеевич, ФБИ-14, 3 курс, 2023
@@ -199,3 +199,7 @@ def example():
 @app.route('/lab2/flowers') 
 def flowers():
     return render_template('flowers.html')
+
+@app.route('/lab2') 
+def lab2():
+    return render_template('lab2.html')
