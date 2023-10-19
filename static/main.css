@@ -35,3 +35,23 @@ img {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.error {
+    background-color: red;
+    border-radius: 15px;
+    border: 1px solid;
+    border-color: red;
+    color: white;
+}
+
+.bilet {
+    background-color: white;
+    border: 1px solid;
+    border-color: black;
+    padding: 5px;
+    text-align: center;
+    height: 350px;
+    width: 300px;
+    border-radius: 15px;
+    line-height: 1.5;
+}

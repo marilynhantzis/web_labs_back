@@ -64,3 +64,27 @@ def pay():
 @lab3.route("/lab3/success")
 def thanks():
     return render_template('success.html')
+
+
+@lab3.route("/lab3/buy")
+def buy():
+    errors = {}
+    name = request.args.get('name')
+    type = request.args.get('type')
+    bag = request.args.get('bag')
+    age = request.args.get('age')
+    start = request.args.get('start')
+    finish = request.args.get('finish')
+    date = request.args.get('date')
+    place = request.args.get('place')
+    if name == '':
+        errors['name'] = 'Введите имя!'
+    if age == '':
+        errors['age'] = 'Введите возраст!'
+    if start == '':
+        errors['start'] = 'Введите место отправления!'
+    if finish == '':
+        errors['finish'] = 'Введите место прибытия!'
+    if date == '':
+        errors['date'] = 'Введите дату!'
+    return render_template('buy.html', name = name, type = type, bag = bag, age = age, start = start, finish = finish, date = date, errors=errors, place = place)
