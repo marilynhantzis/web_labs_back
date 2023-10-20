@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 4 {% endblock %}
+
+{% block main %}
+        <h1>Здравствуйте, {{ username }}!</h1>
+        <h2>Вы успешно авторизировались в системе!</h2>
+        <a href='/lab4/login'>Вернуться на страницу авторизации</a>
+{% endblock %}

@@ -37,11 +37,8 @@ img {
 }
 
 .error {
-    background-color: red;
-    border-radius: 15px;
-    border: 1px solid;
-    border-color: red;
-    color: white;
+    color: red;
+    font-weight: bold;
 }
 
 .bilet {
