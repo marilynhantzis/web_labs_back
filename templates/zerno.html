@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 3 {% endblock %}
+
+{% block main %}
+    {% if order == 0 %}
+    <h1>Оформление заказа</h1>
+    <form method="POST">
+    <h2>Выберите продукт</h2>
+        <select name="zerno">
+            <option value="first" selected>Ячмень</option>
+            <option value="second">Овес</option>
+            <option value="third">Пшеница</option>
+            <option value="four">Рожь</option>
+          </select>
+    <h2>Укажите вес выбранного продукта</h2>
+    <input type="number" name="weight" value = "{{ weight or '' }}">
+    <button type="submit">Оформить заказ</button>
+    </form>
+    {% elif order == 1 %}
+    <h1>Оформление заказа</h1>
+    <form method="POST">
+    <h2>Выберите продукт</h2>
+        <select name="zerno">
+            <option value="first" selected>Ячмень</option>
+            <option value="second">Овес</option>
+            <option value="third">Пшеница</option>
+            <option value="third">Рожь</option>
+          </select>
+    <h2>Укажите вес выбранного продукта</h2>
+    <div style="color:red">Вы не указали вес!</div>
+    <input type="number" name="weight" value = "{{ weight or '' }}">
+    <button type="submit">Оформить заказ</button>
+    </form>
+    {% elif order == 2 %}
+    <h1>Оформление заказа</h1>
+    <form method="POST">
+    <h2>Выберите продукт</h2>
+        <select name="zerno">
+            <option value="first" selected>Ячмень</option>
+            <option value="second">Овес</option>
+            <option value="third">Пшеница</option>
+            <option value="third">Рожь</option>
+          </select>
+    <h2>Укажите вес выбранного продукта</h2>
+    <div style="color:red">Такого веса нет в наличии</div>
+    <input type="number" name="weight" value = "{{ weight or '' }}">
+    <button type="submit">Оформить заказ</button>
+    {% elif order == 3 %}
+    <h1>Оформление заказа</h1>
+    <form method="POST">
+    <h2>Выберите продукт</h2>
+        <select name="zerno">
+            <option value="first" selected>Ячмень</option>
+            <option value="second">Овес</option>
+            <option value="third">Пшеница</option>
+            <option value="third">Рожь</option>
+          </select>
+    <h2>Укажите вес выбранного продукта</h2>
+    <div style="color:red">Пожалуйста, введтие корректное значение</div>
+    <input type="number" name="weight" value = "{{ weight or '' }}">
+    <button type="submit">Оформить заказ</button>
+    {% elif order == 4 %}
+    <h1>Ваш заказ оформлен!</h1>
+    <div>Вы заказали: {{ zerno }} </div>
+    <div>Вес:  {{ weight }} </div>
+    <div style="color: red;">Ваша скидка: {{ sale }}</div>
+    <div>Сумма к оплате: {{ sum }}</div>
+    {% elif order == 5 %}      
+    <h1>Ваш заказ оформлен!</h1>
+    <div>Вы заказали: {{ zerno }} </div>
+    <div>Вес: {{ weight }} </div>
+    <div>Сумма к оплате: {{ sum }}</div>
+    </form>
+    {% endif %}
+{% endblock %}

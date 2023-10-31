@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 3 {% endblock %}
+
+{% block main %}
+    <h1>Оформление заказа</h1>
+    <form method="POST">
+    <h2>Выберите продукт</h2>
+        <select name="zerno">
+            <option value="first" selected>Ячмень</option>
+            <option value="second">Овес</option>
+            <option value="third">Пшеница</option>
+            <option value="four">Рожь</option>
+          </select>
+    <h2>Укажите вес выбранного продукта</h2>
+    <input type="number" name="weight" value = "{{ weight or '' }}">
+    <button type="submit">Оформить заказ</button>
+    </form>
+{% endblock %}
