@@ -111,3 +111,15 @@ def zerno():
             sum = 14000 * float(weight)
             zerno = 'Рожь'
         return render_template('zerno.html', order = order, sum=sum, weight=weight, zerno=zerno)
+    
+@lab4.route('/lab4/cookies', methods=['GET', 'POST'])
+def cookies():
+    if request.method=='GET':
+        return render_template('cookies.html')
+    
+    color = request.form.get('color')
+    headers = {
+        'Set-Cookie': 'color=' + color + '; path=/',
+        'Location': '/lab4/cookies'
+    }
+    return '', 303, headers 
