@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 3 {% endblock %}
+
+{% block main %}
+    <h1>{{ head }}</h1>
+    <h2>{{ foot }}</h2>
+    <img src="{{ url_for('static', filename=src)}}">
+    <img src="{{ url_for('static', filename=src2)}}">
+    <img src="{{ url_for('static', filename=src3)}}">
+{% endblock %}
