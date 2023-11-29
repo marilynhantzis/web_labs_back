@@ -111,26 +111,35 @@ def zerno():
             sum = 14000 * float(weight)
             zerno = 'Рожь'
         return render_template('zerno.html', order = order, sum=sum, weight=weight, zerno=zerno)
-    
-@lab4.route('/lab4/cookies', methods=['GET', 'POST'])
+
+@lab4.route('/lab4/cookies', methods = ['GET', 'POST'])
 def cookies():
-    if request.method=='GET':
+    if request.method =='GET':
         return render_template('cookies.html')
     
     color = request.form.get('color')
-    background = request.form.get('background')
-    font = request.form.get('font')
-    headers = [{
-        'Set-Cookie': 'color=' + color + '; path=/',
-        'Location': '/lab4/cookies'
-    },
-    {
-        'Set-Cookie': 'background-color=' + background + '; path=/',
-        'Location': '/lab4/cookies'
-    },
-    {
-        'Set-Cookie': 'font-size=' + font + '; path=/',
-        'Location': '/lab4/cookies'
-    },
-    ]
-    return '', 303, headers 
+    b_color = request.form.get('background-color') 
+    f_size = request.form.get('font-size')
+    error = ''
+
+    if color == b_color:
+        error = 'Цвет текста не должен совпадать с цветом фона'
+        return render_template('cookies.html', error = error)
+    elif color != b_color:
+        color = color
+
+    if f_size == '':
+        error = 'Задайте размер текста'
+        return render_template('cookies.html', error = error)
+    
+    if 5<= int(f_size) <= 30:
+        f_size = str(f_size) + 'px'
+    else:
+        error = 'Размер текста должен быть от 5px до 30px'
+        return render_template('cookies.html', error = error)
+    
+    headers = {
+         'Set-Cookie': ['color=' + color + '; path=/', 'font-size=' + f_size + '; path=/', 'background-color=' + b_color + '; path=/'],
+         'Location': '/lab4/cookies'
+    }
+    return '', 303, headers

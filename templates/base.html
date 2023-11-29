@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Артем Тарбанаков. {% block lab %} {% endblock %}</title>
-    <link rel = 'stylesheet' href="{{ url_for('static', filename='main.css') }}">
+    <title>Тарбанаков Артем, {% block lab %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css')}}">
     {% if request.cookies.get('color') and request.cookies.get('background-color') and request.cookies.get('font-size') %}
     <style>
         body {
@@ -17,16 +17,15 @@
 </head>
 <body>
     <header>
-        WEB-программирование, часть 2. {{ self.lab() }}
+        <a href="/menu">WEB-программирование, часть 2. {{ self.lab() }}</a>
     </header>
 
     <main>
-        <div><a href="/menu"> Вернуться в меню </a></div>
         {% block main %}{% endblock %}
     </main>
-
+    
     <footer>
-        &copy; Артем Тарбанаков, ФБИ-14, 3 курс, 2023
+        &copy; Тарбанаков Артем, ФБИ-14, 3 курс, 2023
     </footer>
 </body>
 </html>
