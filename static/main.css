@@ -1,11 +1,11 @@
 body {
     margin: 0;
-    background-color: papayawhip;
+    background-color: white;
     margin-top: 75px;
 }
 
 header {
-    background-color: peru;
+    background-color: lightblue;
     z-index: 3;
     position: fixed;
     top: 0;
@@ -18,7 +18,7 @@ header {
 
 footer { 
     z-index: 1;
-    background-color: peru;
+    background-color: lightblue;
     color: white;
     padding: 20px;
     font-size: 16pt;
