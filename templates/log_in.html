@@ -1,10 +1,10 @@
 {% extends "baza.html" %}
 
-{% block namez %}Регистрация{% endblock %}
+{% block namez %}Авторизация{% endblock %}
 
 {% block main %}
 <form method="POST">
-    <h1>Страница регистрации</h1>
+    <h1>Авторизация</h1>
 
     <div>
         <input type="text" name="username" placeholder="username">
@@ -16,7 +16,7 @@
         <label for="password">Пароль</label>
     </div>
 
-    <button type="submit">Зарегистрироваться</button>
+    <button type="submit">Авторизироваться</button>
     <div class="errors">{{ errors[0] }}</div>
 </form>
 {% endblock %}

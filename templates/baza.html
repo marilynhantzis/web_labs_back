@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block namez %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='baza.css')}}">
+</head>
+<body>
+    <header>
+        <a href=""><b>База знаний</b></a>
+        <div class="show_notes"><a href="">Просмотреть заметки</a></div>
+        <div class="create_notes"><a href="">Создать заметки</a></div>
+        <div class="login"><a href="/lab5/login">Логин</a></div>
+        <div class="regist"><a href="/lab5/register">Регистрация</a></div>
+        <div class="user_name"><a href="">{{ visiblename }}</a></div>
+    </header>
+
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+    
+    <footer>
+        &copy; Тарбанаков Артем, ФБИ-14, 3 курс, 2023
+    </footer>
+</body>
+</html>
