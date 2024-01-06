@@ -1,0 +1,13 @@
+{% extends "baza.html" %}
+
+{% block namez %}Список заметок{% endblock %}
+
+{% block main %}
+    <h1>Ваши заметки</h1>
+    <ul>
+        {% for article in lists %}
+            <li><b>{{ article[0] }}</b></li>
+            {{ article[1] }}
+        {% endfor %}
+        </ul>
+{% endblock %}

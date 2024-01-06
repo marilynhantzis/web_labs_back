@@ -1,0 +1,13 @@
+{% extends "baza.html" %}
+
+{% block namez %}Добавление заметки{% endblock %}
+
+{% block main %}
+    <h1>Новая заметка</h1>
+    <form method="POST">
+        <div><input name="title_article" type="text" placeholder="Название статьи"></div>
+        <div><textarea name="text_article" placeholder="Текст статьи" rows="20"></textarea></div>
+    </textarea>
+        <input type="submit" value="Apply">
+    </form>
+{% endblock %}
