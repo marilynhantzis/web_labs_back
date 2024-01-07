@@ -26,6 +26,7 @@ def menu():
             <li><a href = "/lab3"> Лабораторная работа 3."Формы в Flask" </a></li>
             <li><a href = "/lab4"> Лабораторная работа 4."Формы (POST)" </a></li>
             <li><a href = "/lab5"> Лабораторная работа 5."Flask и БД" </a></li>
+            <li><a href = "/lab6"> Лабораторная работа 6."Flask и ORM" </a></li>
 
             </ul>
             <footer>
