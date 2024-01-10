@@ -27,6 +27,10 @@ def menu():
             <li><a href = "/lab4"> Лабораторная работа 4."Формы (POST)" </a></li>
             <li><a href = "/lab5"> Лабораторная работа 5."Flask и БД" </a></li>
             <li><a href = "/lab6"> Лабораторная работа 6."Flask и ORM" </a></li>
+            <li><a href = "/lab7"> Лабораторная работа 7."API JSON-RPC" </a></li>
+            <li><a href = "/lab7"> Лабораторная работа 8."API REST" </a></li>
+
+
 
             </ul>
             <footer>
