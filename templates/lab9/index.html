@@ -6,5 +6,31 @@
 {% endblock %}
 
 {% block main %}
-    <h1>Поздравления</h1>
+<h2>Новогодняя открытка</h2>
+<form method="POST">
+    <label for="recipient_name">Имя получателя:</label>
+    <input type="text" id="recipient_name" name="recipient_name" value="{{ recipient_name }}"><br><br>
+
+    <label for="recipient_gender">Пол получателя:</label>
+    <select id="recipient_gender" name="recipient_gender">
+        <option value="мужской" {% if recipient_gender == 'мужской' %} selected {% endif %}>Мужской</option>
+        <option value="женский" {% if recipient_gender == 'женский' %} selected {% endif %}>Женский</option>
+    </select><br><br>
+
+    <label for="sender_name">Имя отправителя:</label>
+    <input type="text" id="sender_name" name="sender_name" value="{{ sender_name }}"><br><br>
+
+    <button type="submit">Создать открытку</button>
+</form>
+
+<hr>
+
+{% if recipient_name %}
+    <h2>Открытка</h2>
+    {% if recipient_gender == 'мужской' %}
+        <p>С Новым Годом, {{ recipient_name }}! Желаю быть счастливым в новом году. С наилучшими пожеланиями, {{ sender_name }}.</p>
+    {% else %}
+        <p>С Новым Годом, {{ recipient_name }}! Желаю быть счастливой в новом году. С наилучшими пожеланиями, {{ sender_name }}.</p>
+    {% endif %}
+{% endif %}
 {% endblock %}

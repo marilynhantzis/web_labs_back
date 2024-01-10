@@ -29,7 +29,7 @@ def menu():
             <li><a href = "/lab6"> Лабораторная работа 6."Flask и ORM" </a></li>
             <li><a href = "/lab7"> Лабораторная работа 7."API JSON-RPC" </a></li>
             <li><a href = "/lab8"> Лабораторная работа 8."API REST" </a></li>
-
+            <li><a href = "/lab9"> Лабораторная работа 9."Обработчик ошибок" </a></li>
 
 
             </ul>

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная 9{% endblock %}
+
+{% block main %}
+{% if recipient_gender == 'мужской' %}
+        <h1>Дорогой {{ recipient_name }}, поздравляю тебя с новым годом!</h1>
+        <p style="font-size: 32px;">С Новым Годом, {{ recipient_name }}! Желаю быть счастливым в новом году. С наилучшими пожеланиями, {{ sender_name }}.</p>
+    {% else %}
+        <h1>Дорогая {{ recipient_name }}, поздравляю тебя с новым годом!</h1>
+        <p style="font-size: 32px;">С Новым Годом, {{ recipient_name }}! Желаю быть счастливой в новом году. С наилучшими пожеланиями, {{ sender_name }}.</p>
+{% endif %}
+{%endblock%}
