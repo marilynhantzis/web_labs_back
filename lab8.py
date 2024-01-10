@@ -29,3 +29,9 @@ def del_course(course_num):
         return "Error 404: Course not found", 404
     del courses[course_num]
     return '', 204
+
+
+@lab8.route('/lab8/api/courses/<int:course_num>', methods=['PUT'])
+def put_courses(course_num):
+    course = request.get_json()
+    courses[course_num] = course
